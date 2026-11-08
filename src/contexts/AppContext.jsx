@@ -11,7 +11,7 @@ const AppContext = createContext(null);
  * App-wide state that many pages need:
  * - range:    the date range picked in the header (Dashboard + Analytics use it)
  * - theme:    "light" | "dark" | "system", remembered in localStorage
- * - settings: studio profile from json-server (/settings)
+ * - settings: studio profile from the data layer (/settings)
  * - money():  formats a number in the studio's currency
  */
 export function AppProvider({ children }) {

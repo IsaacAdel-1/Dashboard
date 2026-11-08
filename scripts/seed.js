@@ -1,17 +1,17 @@
-// Generates realistic mock data for the dashboard and writes it to the json-server database.
+// Generates realistic mock data for the dashboard and writes it to
+// src/data/company_database_sample.json, which the app imports directly.
 //
 //   npm run seed                       -> data ends today
 //   npm run seed -- --today=2026-11-08 -> data ends on a fixed date
 //
-// The output is deterministic for a given "today" (seeded random), so re-running it
-// resets the database to a clean state after you've been editing records in the UI.
+// The output is deterministic for a given "today" (seeded random).
 
 import { writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const OUTPUT = join(__dirname, "..", "company_database_sample.json");
+const OUTPUT = join(__dirname, "..", "src", "data", "company_database_sample.json");
 
 const todayArg = process.argv.find((a) => a.startsWith("--today="));
 const TODAY = todayArg ? new Date(`${todayArg.split("=")[1]}T00:00:00Z`) : startOfDayUTC(new Date());

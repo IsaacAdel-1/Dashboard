@@ -7,7 +7,7 @@ import { ErrorState, LoadingState } from "../components/ui/States";
 import { btn, cellInputClass, inputClass, tdClass, thClass } from "../components/ui/styles";
 import { useApp } from "../contexts/AppContext";
 import useFetch from "../hooks/useFetch";
-import { api, API_URL, ENDPOINTS } from "../services/api";
+import { api, ENDPOINTS } from "../services/api";
 import { CURRENCIES } from "../utils/constants";
 
 const THEME_OPTIONS = [
@@ -235,13 +235,11 @@ export default function Settings() {
                 </div>
             </Card>
 
-            <Card title="Demo data" subtitle="Everything in this dashboard is mock data served by json-server.">
+            <Card title="Demo data" subtitle="Everything in this dashboard is mock data loaded from a local JSON file.">
                 <ul className="flex flex-col gap-2 text-sm text-ink-2">
+                    <li>Changes are kept in memory and reset when you reload the page.</li>
                     <li>
-                        API: <code className="rounded bg-surface-2 px-1.5 py-0.5 text-xs">{API_URL}</code>
-                    </li>
-                    <li>
-                        Reset all data to a fresh sample (dated up to today): stop the server and run{" "}
+                        Regenerate the sample data (dated up to today):{" "}
                         <code className="rounded bg-surface-2 px-1.5 py-0.5 text-xs">npm run seed</code>
                     </li>
                 </ul>

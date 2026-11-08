@@ -10,7 +10,7 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /**
  * Modal form to add a client.
- * onCreated(client) is called with the saved client (json-server adds the id).
+ * onCreated(client) is called with the saved client (the data layer adds the id).
  */
 const NewClientForm = ({ existingNames = [], onClose, onCreated }) => {
     const [values, setValues] = useState(EMPTY);

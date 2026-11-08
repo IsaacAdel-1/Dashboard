@@ -18,7 +18,6 @@ export function ErrorState({ message, onRetry }) {
                 <p className="font-medium text-ink">Couldn't load data</p>
                 <p className="mt-1 max-w-md text-sm text-muted">{message}</p>
             </div>
-            {import.meta.env.DEV && <code className="rounded-md bg-surface-2 px-2 py-1 text-xs text-ink-2">npm run server</code>}
             {onRetry && (
                 <button type="button" className={btn.secondary} onClick={onRetry}>
                     <RefreshCw size={14} /> Try again

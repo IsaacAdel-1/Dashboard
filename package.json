@@ -9,7 +9,11 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "server": "json-server company_database_sample.json --port 3001",
+    "start:api": "json-server company_database_sample.json --host 0.0.0.0 --port $PORT",
     "seed": "node scripts/seed.js"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   },
   "dependencies": {
     "json-server": "^1.0.0-beta.15",

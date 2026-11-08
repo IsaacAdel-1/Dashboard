@@ -1,5 +1,7 @@
-// One place for the json-server address. Override it with VITE_API_URL in a .env file.
-export const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:3001";
+// One place for the json-server address. Set VITE_API_URL in a .env file locally,
+// or in the hosting provider's environment variables (e.g. the Render URL on Vercel).
+// Trailing slashes are trimmed so "https://x.onrender.com/" works too.
+export const API_URL = (import.meta.env.VITE_API_URL ?? "http://localhost:3001").replace(/\/+$/, "");
 
 export const ENDPOINTS = {
     settings: `${API_URL}/settings`,
@@ -22,8 +24,12 @@ async function request(url, { method = "GET", body, signal } = {}) {
         });
     } catch (e) {
         if (e.name === "AbortError") throw e;
-        // fetch only rejects when the server can't be reached at all
-        throw new Error(`Can't reach the API at ${API_URL}. Is json-server running? (npm run server)`, { cause: e });
+        // fetch only rejects when the server can't be reached at all.
+        // The json-server hint only makes sense while developing locally.
+        const message = import.meta.env.DEV
+            ? `Can't reach the API at ${API_URL}. Is json-server running? (npm run server)`
+            : "Couldn't reach the API.";
+        throw new Error(message, { cause: e });
     }
     if (!response.ok) {
         throw new Error(`Request failed: ${method} ${url} (${response.status})`);

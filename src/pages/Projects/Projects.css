@@ -1,0 +1,9 @@
+/* Native date/number inputs: keep them compact inside table cells */
+.projects-container input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.projects-container input[type="number"]::-webkit-inner-spin-button {
+    opacity: 0.5;
+}

@@ -1,0 +1,909 @@
+{
+  "departments": [
+    {
+      "id": "dept_01",
+      "name": "Software Engineering",
+      "manager_id": "emp_101",
+      "budget": 250000,
+      "currency": "USD",
+      "location": "Building A - Floor 3",
+      "active_goals": [
+        "Launch App V2",
+        "Reduce cloud costs by 15%"
+      ]
+    },
+    {
+      "id": "dept_02",
+      "name": "Sales & Marketing",
+      "manager_id": "emp_104",
+      "budget": 180000,
+      "currency": "USD",
+      "location": "Building B - Floor 1",
+      "active_goals": [
+        "Acquire 50 new enterprise clients",
+        "Increase LinkedIn CTR to 4%"
+      ]
+    },
+    {
+      "id": "dept_03",
+      "name": "Customer Success",
+      "manager_id": "emp_105",
+      "budget": 90000,
+      "currency": "USD",
+      "location": "Building A - Floor 1",
+      "active_goals": [
+        "Maintain CSAT above 95%",
+        "Reduce churn rate below 2%"
+      ]
+    }
+  ],
+  "employees": [
+    {
+      "id": "emp_101",
+      "first_name": "Tarek",
+      "last_name": "Mansour",
+      "email": "t.mansour@company.com",
+      "phone": "+201001234567",
+      "role": "VP of Engineering",
+      "department_id": "dept_01",
+      "salary": 8500,
+      "hire_date": "2021-03-15",
+      "status": "Active",
+      "performance_rating": 4.8,
+      "skills": [
+        "Architecture",
+        "Next.js",
+        "Cloud Infrastructure"
+      ],
+      "address": {
+        "city": "Cairo",
+        "country": "Egypt"
+      }
+    },
+    {
+      "id": "emp_102",
+      "first_name": "Yasmine",
+      "last_name": "Ali",
+      "email": "y.ali@company.com",
+      "phone": "+201112223334",
+      "role": "Senior Full-Stack Developer",
+      "department_id": "dept_01",
+      "salary": 5200,
+      "hire_date": "2023-06-01",
+      "status": "Active",
+      "performance_rating": 4.5,
+      "skills": [
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Tailwind"
+      ],
+      "address": {
+        "city": "Alexandria",
+        "country": "Egypt"
+      }
+    },
+    {
+      "id": "emp_103",
+      "first_name": "Ahmed",
+      "last_name": "Samy",
+      "email": "a.samy@company.com",
+      "phone": "+201223334445",
+      "role": "Frontend QA Engineer",
+      "department_id": "dept_01",
+      "salary": 3100,
+      "hire_date": "2024-01-10",
+      "status": "On Leave",
+      "performance_rating": 4.1,
+      "skills": [
+        "Cypress",
+        "Jest",
+        "TypeScript"
+      ],
+      "address": {
+        "city": "Giza",
+        "country": "Egypt"
+      }
+    },
+    {
+      "id": "emp_104",
+      "first_name": "Nour",
+      "last_name": "Kamil",
+      "email": "n.kamil@company.com",
+      "phone": "+201556667778",
+      "role": "Global Sales Director",
+      "department_id": "dept_02",
+      "salary": 7000,
+      "hire_date": "2022-01-20",
+      "status": "Active",
+      "performance_rating": 4.9,
+      "skills": [
+        "B2B Sales",
+        "Negotiation",
+        "CRM Integration"
+      ],
+      "address": {
+        "city": "Cairo",
+        "country": "Egypt"
+      }
+    },
+    {
+      "id": "emp_105",
+      "first_name": "Mariam",
+      "last_name": "Fahmy",
+      "email": "m.fahmy@company.com",
+      "phone": "+201099887766",
+      "role": "Customer Success Lead",
+      "department_id": "dept_03",
+      "salary": 4000,
+      "hire_date": "2022-09-11",
+      "status": "Active",
+      "performance_rating": 4.6,
+      "skills": [
+        "Public Relations",
+        "Zendesk",
+        "Conflict Resolution"
+      ],
+      "address": {
+        "city": "Assiut",
+        "country": "Egypt"
+      }
+    }
+  ],
+  "customers": [
+    {
+      "id": "cust_901",
+      "company_name": "Alpha Tech Solutions",
+      "contact_name": "Omar Hegazi",
+      "email": "hegazi@alphatech.io",
+      "phone": "+15550198234",
+      "segment": "Enterprise",
+      "status": "Active",
+      "total_spent": 145000,
+      "join_date": "2022-05-14",
+      "account_manager_id": "emp_104"
+    },
+    {
+      "id": "cust_902",
+      "company_name": "Delta Logistics",
+      "contact_name": "Sarah Connor",
+      "email": "s.connor@deltaship.com",
+      "phone": "+15550144556",
+      "segment": "Enterprise",
+      "status": "Active",
+      "total_spent": 89000,
+      "join_date": "2023-11-02",
+      "account_manager_id": "emp_104"
+    },
+    {
+      "id": "cust_903",
+      "company_name": "ByteSize Startups",
+      "contact_name": "Mostafa Gad",
+      "email": "m.gad@bytesize.com",
+      "phone": "+201009876543",
+      "segment": "Startup",
+      "status": "Active",
+      "total_spent": 12500,
+      "join_date": "2025-02-28",
+      "account_manager_id": "emp_105"
+    },
+    {
+      "id": "cust_904",
+      "company_name": "Apex Retail Group",
+      "contact_name": "John Doe",
+      "email": "john.d@apexretail.net",
+      "phone": "+442079460192",
+      "segment": "Mid-Market",
+      "status": "Inactive",
+      "total_spent": 34000,
+      "join_date": "2024-04-19",
+      "account_manager_id": "emp_104"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_001",
+      "name": "Core Enterprise ERP (SaaS)",
+      "sku": "ERP-SAAS-01",
+      "category": "Software",
+      "unit_price": 4500,
+      "billing_cycle": "Monthly",
+      "cost_of_delivery": 350,
+      "stock_level": 9999,
+      "is_available": true,
+      "tags": [
+        "cloud",
+        "enterprise",
+        "finance"
+      ]
+    },
+    {
+      "id": "prod_002",
+      "name": "Advanced Analytics Add-on",
+      "sku": "ERP-ANALYTICS-X",
+      "category": "Software Add-on",
+      "unit_price": 1200,
+      "billing_cycle": "Monthly",
+      "cost_of_delivery": 50,
+      "stock_level": 9999,
+      "is_available": true,
+      "tags": [
+        "ai",
+        "bi",
+        "charts"
+      ]
+    },
+    {
+      "id": "prod_003",
+      "name": "Secure Dedicated Server Node",
+      "sku": "HW-NODE-SECURE",
+      "category": "Hardware",
+      "unit_price": 8500,
+      "billing_cycle": "One-time",
+      "cost_of_delivery": 4200,
+      "stock_level": 14,
+      "is_available": true,
+      "tags": [
+        "hardware",
+        "infrastructure",
+        "security"
+      ]
+    },
+    {
+      "id": "prod_004",
+      "name": "Custom API Integration Service",
+      "sku": "SRV-API-CUST",
+      "category": "Consulting",
+      "unit_price": 150,
+      "billing_cycle": "Hourly",
+      "cost_of_delivery": 60,
+      "stock_level": 100,
+      "is_available": false,
+      "tags": [
+        "services",
+        "custom-code"
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "order_id": "ord_2026_jan_01",
+      "customer_id": "cust_901",
+      "sales_rep_id": "emp_104",
+      "order_date": "2026-01-15T10:00:00Z",
+      "payment_status": "Paid",
+      "fulfillment_status": "Delivered",
+      "financials": {
+        "subtotal": 22000,
+        "tax_rate": 0.14,
+        "tax_amount": 3080,
+        "discount_amount": 80,
+        "total_amount": 25000,
+        "payment_method": "Wire Transfer"
+      },
+      "items": [
+        {
+          "product_id": "prod_001",
+          "quantity": 5,
+          "negotiated_price": 4400
+        }
+      ],
+      "shipping_details": {
+        "carrier": "DHL Express",
+        "tracking_number": "DHL-11111-EG",
+        "estimated_days": 3
+      },
+      "id": "VUiqiPo1B0M"
+    },
+    {
+      "order_id": "ord_2026_feb_01",
+      "customer_id": "cust_902",
+      "sales_rep_id": "emp_104",
+      "order_date": "2026-02-12T14:20:00Z",
+      "payment_status": "Paid",
+      "fulfillment_status": "Delivered",
+      "financials": {
+        "subtotal": 27000,
+        "tax_rate": 0.14,
+        "tax_amount": 3780,
+        "discount_amount": 780,
+        "total_amount": 30000,
+        "payment_method": "Wire Transfer"
+      },
+      "items": [
+        {
+          "product_id": "prod_003",
+          "quantity": 3,
+          "negotiated_price": 8500
+        }
+      ],
+      "shipping_details": {
+        "carrier": "FedEx",
+        "tracking_number": "FX-22222-US",
+        "estimated_days": 4
+      },
+      "id": "0EOXZVmXh08"
+    },
+    {
+      "order_id": "ord_2026_mar_01",
+      "customer_id": "cust_903",
+      "sales_rep_id": "emp_105",
+      "order_date": "2026-03-22T09:00:00Z",
+      "payment_status": "Paid",
+      "fulfillment_status": "Delivered",
+      "financials": {
+        "subtotal": 11000,
+        "tax_rate": 0.14,
+        "tax_amount": 1540,
+        "discount_amount": 540,
+        "total_amount": 12000,
+        "payment_method": "Credit Card (Stripe)"
+      },
+      "items": [
+        {
+          "product_id": "prod_001",
+          "quantity": 2,
+          "negotiated_price": 4500
+        }
+      ],
+      "shipping_details": {
+        "carrier": "Digital Delivery",
+        "tracking_number": null,
+        "estimated_days": 0
+      },
+      "id": "HauN9mkbpYA"
+    },
+    {
+      "order_id": "ord_2026_apr_01",
+      "customer_id": "cust_904",
+      "sales_rep_id": "emp_104",
+      "order_date": "2026-04-05T11:15:00Z",
+      "payment_status": "Paid",
+      "fulfillment_status": "Delivered",
+      "financials": {
+        "subtotal": 13000,
+        "tax_rate": 0.14,
+        "tax_amount": 1820,
+        "discount_amount": 820,
+        "total_amount": 14000,
+        "payment_method": "Wire Transfer"
+      },
+      "items": [
+        {
+          "product_id": "prod_001",
+          "quantity": 3,
+          "negotiated_price": 4333.33
+        }
+      ],
+      "shipping_details": {
+        "carrier": "FedEx",
+        "tracking_number": "FX-44444-US",
+        "estimated_days": 5
+      },
+      "id": "9-4_-nkxf9U"
+    },
+    {
+      "order_id": "ord_2026_001",
+      "customer_id": "cust_901",
+      "sales_rep_id": "emp_104",
+      "order_date": "2026-05-10T14:32:00Z",
+      "payment_status": "Paid",
+      "fulfillment_status": "Delivered",
+      "financials": {
+        "subtotal": 10200,
+        "tax_rate": 0.14,
+        "tax_amount": 1428,
+        "discount_amount": 500,
+        "total_amount": 11128,
+        "payment_method": "Wire Transfer"
+      },
+      "items": [
+        {
+          "product_id": "prod_001",
+          "quantity": 2,
+          "negotiated_price": 4500
+        },
+        {
+          "product_id": "prod_002",
+          "quantity": 1,
+          "negotiated_price": 1200
+        }
+      ],
+      "shipping_details": {
+        "carrier": "DHL Express",
+        "tracking_number": "DHL-98234-EG",
+        "estimated_days": 3
+      },
+      "id": "CcjoEPZXXz0"
+    },
+    {
+      "order_id": "ord_2026_002",
+      "customer_id": "cust_903",
+      "sales_rep_id": "emp_105",
+      "order_date": "2026-05-18T09:15:00Z",
+      "payment_status": "Pending",
+      "fulfillment_status": "Processing",
+      "financials": {
+        "subtotal": 4500,
+        "tax_rate": 0.14,
+        "tax_amount": 630,
+        "discount_amount": 0,
+        "total_amount": 5130,
+        "payment_method": "Credit Card (Stripe)"
+      },
+      "items": [
+        {
+          "product_id": "prod_001",
+          "quantity": 1,
+          "negotiated_price": 4500
+        }
+      ],
+      "shipping_details": {
+        "carrier": "Digital Delivery",
+        "tracking_number": null,
+        "estimated_days": 0
+      },
+      "id": "cfsh99odcKo"
+    },
+    {
+      "order_id": "ord_2026_003",
+      "customer_id": "cust_902",
+      "sales_rep_id": "emp_104",
+      "order_date": "2026-05-19T11:00:00Z",
+      "payment_status": "Paid",
+      "fulfillment_status": "Shipped",
+      "financials": {
+        "subtotal": 18200,
+        "tax_rate": 0.05,
+        "tax_amount": 910,
+        "discount_amount": 1200,
+        "total_amount": 17910,
+        "payment_method": "Wire Transfer"
+      },
+      "items": [
+        {
+          "product_id": "prod_003",
+          "quantity": 2,
+          "negotiated_price": 8500
+        },
+        {
+          "product_id": "prod_002",
+          "quantity": 1,
+          "negotiated_price": 1200
+        }
+      ],
+      "shipping_details": {
+        "carrier": "FedEx",
+        "tracking_number": "FX-77410-US",
+        "estimated_days": 5
+      },
+      "id": "T0iggVRsbSE"
+    },
+    {
+      "order_id": "ord_2026_jun_01",
+      "customer_id": "cust_901",
+      "sales_rep_id": "emp_104",
+      "order_date": "2026-06-05T16:40:00Z",
+      "payment_status": "Paid",
+      "fulfillment_status": "Delivered",
+      "financials": {
+        "subtotal": 32000,
+        "tax_rate": 0.14,
+        "tax_amount": 4480,
+        "discount_amount": 480,
+        "total_amount": 36000,
+        "payment_method": "Wire Transfer"
+      },
+      "items": [
+        {
+          "product_id": "prod_003",
+          "quantity": 4,
+          "negotiated_price": 8000
+        }
+      ],
+      "shipping_details": {
+        "carrier": "DHL Express",
+        "tracking_number": "DHL-66666-EG",
+        "estimated_days": 3
+      },
+      "id": "2lYKoepW8eU"
+    }
+  ],
+  "projects": [
+    {
+      "client": "Mark Paddila",
+      "type": "Photo Editing",
+      "status": "Pending",
+      "date": "2026-06-21",
+      "amount": 909,
+      "id": "proj_001"
+    },
+    {
+      "id": "proj_002",
+      "client": "Pacific Homes",
+      "type": "Branding Videoss",
+      "status": "Review",
+      "date": "2026-01-21",
+      "amount": 584
+    },
+    {
+      "id": "proj_003",
+      "client": "Garden City Realty",
+      "type": "Property Tour",
+      "status": "Completed",
+      "date": "2026-06-24",
+      "amount": 1034
+    },
+    {
+      "id": "proj_004",
+      "client": "Heritage Estates",
+      "type": "Drone Edit",
+      "status": "Review",
+      "date": "2026-03-16",
+      "amount": 204
+    },
+    {
+      "id": "proj_005",
+      "client": "Elite Realty",
+      "type": "Property Tour",
+      "status": "In Progress",
+      "date": "2026-03-05",
+      "amount": 792
+    },
+    {
+      "id": "proj_006",
+      "client": "Mark Zuckerberg",
+      "type": "Photo Editing",
+      "status": "Pending",
+      "date": "2026-01-21",
+      "amount": 208
+    },
+    {
+      "id": "proj_007",
+      "client": "Bluewater Properties",
+      "type": "Listing Reel",
+      "status": "Review",
+      "date": "2026-04-02",
+      "amount": 247
+    },
+    {
+      "id": "proj_008",
+      "client": "Garden City Realty",
+      "type": "Listing Reel",
+      "status": "In Progress",
+      "date": "2026-05-27",
+      "amount": 358
+    },
+    {
+      "id": "proj_009",
+      "client": "Mountain View Realty",
+      "type": "Drone Edit",
+      "status": "Pending",
+      "date": "2026-02-22",
+      "amount": 919
+    },
+    {
+      "id": "proj_010",
+      "client": "Diamond Estates",
+      "type": "Listing Reel",
+      "status": "Review",
+      "date": "2026-03-06",
+      "amount": 925
+    },
+    {
+      "id": "proj_011",
+      "client": "Sunset Realty",
+      "type": "Drone Edit",
+      "status": "In Progress",
+      "date": "2026-01-27",
+      "amount": 522
+    },
+    {
+      "id": "proj_012",
+      "client": "Skyline Realty",
+      "type": "Drone Edit",
+      "status": "Review",
+      "date": "2026-02-03",
+      "amount": 407
+    },
+    {
+      "id": "proj_013",
+      "client": "Heritage Estates",
+      "type": "Drone Edit",
+      "status": "Review",
+      "date": "2026-05-24",
+      "amount": 774
+    },
+    {
+      "id": "proj_014",
+      "client": "Pacific Homes",
+      "type": "Property Tour",
+      "status": "Completed",
+      "date": "2026-04-11",
+      "amount": 1200
+    },
+    {
+      "id": "proj_015",
+      "client": "Elite Realty",
+      "type": "Photo Editing",
+      "status": "Completed",
+      "date": "2026-01-15",
+      "amount": 450
+    },
+    {
+      "client": "",
+      "type": "Isaac",
+      "status": "",
+      "date": "",
+      "amount": "",
+      "id": "R0YhVf3FYDY"
+    },
+    {
+      "client": "",
+      "type": "Isaacسيبسي",
+      "status": "",
+      "date": "",
+      "amount": "",
+      "id": "L8hlDQD_JkE"
+    },
+    {
+      "client": "",
+      "type": "يبس",
+      "status": "",
+      "date": "",
+      "amount": "",
+      "id": "-mM9-AhR8VQ"
+    },
+    {
+      "client": " Mark Zckrberl!  ",
+      "type": "Photo Editing",
+      "status": "Review",
+      "date": "",
+      "amount": "",
+      "id": "60hHTSJ60-s"
+    },
+    {
+      "client": " Mark Zckrberl!  ",
+      "type": "Photo Editing",
+      "status": "Review",
+      "date": "2026-06-21",
+      "amount": "909",
+      "id": "F_km8sfK5Gg"
+    },
+    {
+      "client": "Pacific Homes",
+      "type": "Photo Editing",
+      "status": "Review",
+      "date": "2026-03-05",
+      "amount": "1034",
+      "id": "EdjvYfk7CHc"
+    },
+    {
+      "client": " Mark Zckrberl!  ",
+      "type": "Isaac",
+      "status": "Completed",
+      "date": "2026-01-21",
+      "amount": "584",
+      "id": "bO2Aspfzhh8"
+    },
+    {
+      "client": "Pacific Homes",
+      "type": "Branding Videos",
+      "status": "",
+      "date": "",
+      "amount": "",
+      "id": "MffHU6gWass"
+    },
+    {
+      "client": "Isaac Adel",
+      "type": "",
+      "status": "",
+      "date": "",
+      "amount": "",
+      "id": "EeYcQbAnL8E"
+    },
+    {
+      "client": "Isaac",
+      "type": "Branding Videos",
+      "status": "",
+      "date": "",
+      "amount": "",
+      "id": "ThL492vYLdk"
+    },
+    {
+      "client": "",
+      "type": "",
+      "status": "",
+      "date": "",
+      "amount": "",
+      "id": "B2D4Z3ke9PM"
+    },
+    {
+      "client": "",
+      "type": "",
+      "status": "",
+      "date": "",
+      "amount": "",
+      "id": "CNoAT2tQlWg"
+    },
+    {
+      "client": "",
+      "type": "",
+      "status": "",
+      "date": "",
+      "amount": "",
+      "id": "Xh8BmMHwqkw"
+    },
+    {
+      "client": "",
+      "type": "",
+      "status": "",
+      "date": "",
+      "amount": "",
+      "id": "5HAAGQ1z8Q0"
+    },
+    {
+      "client": "",
+      "type": "",
+      "status": "",
+      "date": "",
+      "amount": "",
+      "id": "mpEh9D_bOQQ"
+    },
+    {
+      "client": "",
+      "type": "",
+      "status": "",
+      "date": "",
+      "amount": "",
+      "id": "M7WtiRFdu0A"
+    },
+    {
+      "client": "",
+      "type": "",
+      "status": "",
+      "date": "",
+      "amount": "",
+      "id": "TjiBPI6a9Qg"
+    },
+    {
+      "id": "YsbqMiTyml4",
+      "client": "",
+      "type": "ب",
+      "status": "",
+      "date": "",
+      "amount": ""
+    },
+    {
+      "id": "81BnVWgJZYU",
+      "client": "يسب",
+      "type": "",
+      "status": "",
+      "date": "",
+      "amount": ""
+    }
+  ],
+  "clients": [
+    {
+      "id": "client_001",
+      "name": "Sunset Realty",
+      "email": "sunset.realty@email.com",
+      "initials": "SR",
+      "projects": 3,
+      "revenue": 2589
+    },
+    {
+      "id": "client_002",
+      "name": "Premier Homes",
+      "email": "premier.homes@email.com",
+      "initials": "PH",
+      "projects": 3,
+      "revenue": 2233
+    },
+    {
+      "id": "client_003",
+      "name": "Coastal Properties",
+      "email": "coastal.properties@email.com",
+      "initials": "CP",
+      "projects": 5,
+      "revenue": 3719
+    },
+    {
+      "id": "client_004",
+      "name": "Urban Living",
+      "email": "urban.living@email.com",
+      "initials": "UL",
+      "projects": 1,
+      "revenue": 979
+    },
+    {
+      "id": "client_005",
+      "name": "Heritage Estates",
+      "email": "heritage.estates@email.com",
+      "initials": "HE",
+      "projects": 6,
+      "revenue": 4211
+    },
+    {
+      "id": "client_006",
+      "name": "Skyline Realty",
+      "email": "skyline.realty@email.com",
+      "initials": "SR",
+      "projects": 2,
+      "revenue": 597
+    },
+    {
+      "id": "client_007",
+      "name": "Oak Tree Homes",
+      "email": "oak.tree.homes@email.com",
+      "initials": "OT",
+      "projects": 1,
+      "revenue": 806
+    },
+    {
+      "id": "client_008",
+      "name": "Riverside Properties",
+      "email": "riverside.properties@email.com",
+      "initials": "RP",
+      "projects": 0,
+      "revenue": 0
+    },
+    {
+      "id": "client_009",
+      "name": "Mountain View Realty",
+      "email": "mountain.view.realty@email.com",
+      "initials": "MV",
+      "projects": 1,
+      "revenue": 919
+    },
+    {
+      "id": "client_010",
+      "name": "Diamond Estates",
+      "email": "diamond.estates@email.com",
+      "initials": "DE",
+      "projects": 1,
+      "revenue": 925
+    },
+    {
+      "id": "client_011",
+      "name": "Crown Properties",
+      "email": "crown.properties@email.com",
+      "initials": "CP",
+      "projects": 2,
+      "revenue": 2028
+    },
+    {
+      "id": "client_012",
+      "name": "Elite Realty",
+      "email": "elite.realty@email.com",
+      "initials": "ER",
+      "projects": 4,
+      "revenue": 3141
+    },
+    {
+      "id": "client_013",
+      "name": "Pacific Homes",
+      "email": "pacific.homes@email.com",
+      "initials": "PH",
+      "projects": 8,
+      "revenue": 8024
+    },
+    {
+      "id": "client_014",
+      "name": "Garden City Realty",
+      "email": "garden.city.realty@email.com",
+      "initials": "GC",
+      "projects": 6,
+      "revenue": 4537
+    },
+    {
+      "id": "client_015",
+      "name": "Bluewater Properties",
+      "email": "bluewater.properties@email.com",
+      "initials": "BP",
+      "projects": 2,
+      "revenue": 687
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

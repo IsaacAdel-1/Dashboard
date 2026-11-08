@@ -1,0 +1,12 @@
+ {
+      "id": "prod_001",
+      "name": "Core Enterprise ERP (SaaS)",
+      "sku": "ERP-SAAS-01",
+      "category": "Software",
+      "unit_price": 4500.00,
+      "billing_cycle": "Monthly",
+      "cost_of_delivery": 350.00,
+      "stock_level": 9999,
+      "is_available": true,
+      "tags": ["cloud", "enterprise", "finance"]
+    }

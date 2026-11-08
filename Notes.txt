@@ -1,0 +1,57 @@
+
+في ال useSearch بستخدم ال Loading جوة ال dependencies علشان كده ال useEffect مش هيشتغل تاني و هياخد القيم الفاضية لل 
+states اللي جاية من ال useFetch و ساعتها مش هيطلع الجدول ولا البيانات 
+
+
+useEffect , useState --> مش بيتكتبوا غير فوق في الكومبوننت مينفعش يتكتبوا جوة فانكشن 
+
+مهم قوي اني الاحظ ان ال states بتتغير علي طول الكومبوننت فالحتة دي لازم اخد بالي منها كويس ان ممكن القيمة اللي انا عايزها 
+مش هي اللي بستخدمها فلازم اتاكد 
+
+ال controller بيكون Ref و بنخليه مساوي لل AbortController و ده اللي بنعمله abort 
+controller.current?.abort() ;
+ال abort ده هو اللي بيلغي ال signal 
+abort --> إلغاء 
+
+
+// ! async function return promise
+// ! useEffect should return cleanup function so , it can't be async because async return promise
+
+
+
+// Width and height in Flex 
+
+if Parent 
+.parent {
+  display: flex;
+  width: 600px;
+  height: 400px;
+}
+and child 
+.child {
+  width: 100px;
+  height: 100px;
+}
+
+height of child 400px due to the default align-items : stretch 
+
+
+I can put an element by relative and top : 20px , left :20px and the recent elements not move
+
+return {
+        SaveNewRow , isRowChange ,  SaveChanges , handleNewRowValues ,
+        NewProject ,onRowClick ,handleRowValues ,ClickedRow , RowBeforeEdit ,newRow,
+        projectsError , projectsLoading, projects : VisibleProjects,setClickedRow
+    } 
+
+    // مينفعش اخلي القوس المعوج بعد ال return 
+    // في الصف اللي تحتها لان فيه حاجة في ال js اسمها automatic Semicolon Insertion يعني فيه Semicolon هتتعمل بشكل تلقائي بعد ال return
+    // و هتقفل ال return من غير ما تبعت حاجة 
+
+
+catch (e) {  
+    if (e.name === "AbortError") return;
+    setError(e.message);
+}
+
+بيعتبر ان ال AbortError هو ال Error فدايماً فيه ايرور فلازم اكنسله 
